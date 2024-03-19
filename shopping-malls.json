@@ -1,0 +1,782 @@
+[
+    {
+        "name": "100 AM",
+        "lat": 1.27458821795426,
+        "long": 103.84347073661
+    },
+    {
+        "name": "313@Somerset",
+        "lat": 1.30138510214714,
+        "long": 103.837684350436
+    },
+    {
+        "name": "Aperia",
+        "lat": 1.3104736675734,
+        "long": 103.86431321816
+    },
+    {
+        "name": "Balestier Hill Shopping Centre",
+        "lat": 1.32616307866261,
+        "long": 103.843741438467
+    },
+    {
+        "name": "Bugis Cube",
+        "lat": 1.2981408343975,
+        "long": 103.855635339249
+    },
+    {
+        "name": "Bugis Junction",
+        "lat": 1.30011789343093,
+        "long": 103.856191571652
+    },
+    {
+        "name": "Bugis+",
+        "lat": 1.30095171530648,
+        "long": 103.855172625542
+    },
+    {
+        "name": "Capitol Piazza",
+        "lat": 1.29307884763132,
+        "long": 103.851261982149
+    },
+    {
+        "name": "Cathay Cineleisure Orchard",
+        "lat": 1.30152101873533,
+        "long": 103.836429655016
+    },
+    {
+        "name": "City Gate",
+        "lat": 1.30231590504573,
+        "long": 103.862331661034
+    },
+    {
+        "name": "City Square Mall",
+        "lat": 1.31142103107683,
+        "long": 103.856624019991
+    },
+    {
+        "name": "CityLink Mall",
+        "lat": 1.2927777312893,
+        "long": 103.854173501417
+    },
+    {
+        "name": "Duo",
+        "lat": 1.29953434891664,
+        "long": 103.85840168774
+    },
+    {
+        "name": "Far East Plaza",
+        "lat": 1.30717698071189,
+        "long": 103.833792932243
+    },
+    {
+        "name": "Funan",
+        "lat": 1.29134759697794,
+        "long": 103.849989790085
+    },
+    {
+        "name": "Great World City",
+        "lat": 1.29342273662815,
+        "long": 103.832022135776
+    },
+    {
+        "name": "HDB Hub",
+        "lat": 1.33205485190481,
+        "long": 103.848507643079
+    },
+    {
+        "name": "ION Orchard",
+        "lat": 1.30397974144505,
+        "long": 103.832032328465
+    },
+    {
+        "name": "Junction 8",
+        "lat": 1.3504812534505,
+        "long": 103.848760473211
+    },
+    {
+        "name": "Liang Court",
+        "lat": 1.29065860407434,
+        "long": 103.844547179775
+    },
+    {
+        "name": "Liat Towers",
+        "lat": 1.30508722710852,
+        "long": 103.830722581168
+    },
+    {
+        "name": "Lucky Plaza",
+        "lat": 1.30450604646634,
+        "long": 103.833962339817
+    },
+    {
+        "name": "Marina Bay Financial Centre Tower 3",
+        "lat": 1.27912493489912,
+        "long": 103.854457600432
+    },
+    {
+        "name": "Marina Bay Link Mall",
+        "lat": 1.28023825446086,
+        "long": 103.853369662547
+    },
+    {
+        "name": "Marina Bay Sands",
+        "lat": 1.28345419690844,
+        "long": 103.860809048956
+    },
+    {
+        "name": "Marina One",
+        "lat": 1.27790633974599,
+        "long": 103.852851650485
+    },
+    {
+        "name": "Marina Square",
+        "lat": 1.29185533273026,
+        "long": 103.85857808906
+    },
+    {
+        "name": "Midpoint Orchard",
+        "lat": 1.30178778502846,
+        "long": 103.838659766022
+    },
+    {
+        "name": "Millenia Walk",
+        "lat": 1.29260544462492,
+        "long": 103.859724944443
+    },
+    {
+        "name": "Ngee Ann City",
+        "lat": 1.30224168528687,
+        "long": 103.835181912297
+    },
+    {
+        "name": "Orchard Central",
+        "lat": 1.30083890839245,
+        "long": 103.839434733899
+    },
+    {
+        "name": "Orchard Gateway",
+        "lat": 1.30044325279546,
+        "long": 103.839442780042
+    },
+    {
+        "name": "Orchard Plaza",
+        "lat": 1.30125729409965,
+        "long": 103.841150144584
+    },
+    {
+        "name": "Orchard Shopping Centre",
+        "lat": 1.30149992510852,
+        "long": 103.837888257002
+    },
+    {
+        "name": "Palais Renaissance",
+        "lat": 1.30665484543191,
+        "long": 103.829588045188
+    },
+    {
+        "name": "Peoples Park Centre",
+        "lat": 1.28486980177486,
+        "long": 103.842507723868
+    },
+    {
+        "name": "Plaza Singapura",
+        "lat": 1.30074770963916,
+        "long": 103.845047573431
+    },
+    {
+        "name": "Raffles City",
+        "lat": 1.29389357863312,
+        "long": 103.853119904656
+    },
+    {
+        "name": "Scotts Square",
+        "lat": 1.30579942993543,
+        "long": 103.833074706219
+    },
+    {
+        "name": "Serangoon Plaza",
+        "lat": 1.31078075190145,
+        "long": 103.855146819671
+    },
+    {
+        "name": "Sim Lim Square",
+        "lat": 1.30302426686761,
+        "long": 103.853037818418
+    },
+    {
+        "name": "Singapore Shopping Centre",
+        "lat": 1.29815265394505,
+        "long": 103.844111318107
+    },
+    {
+        "name": "Square 2",
+        "lat": 1.32070510956845,
+        "long": 103.844160709661
+    },
+    {
+        "name": "Suntec City",
+        "lat": 1.29546675589675,
+        "long": 103.858585026016
+    },
+    {
+        "name": "Tanglin Mall",
+        "lat": 1.30484344196915,
+        "long": 103.823852794772
+    },
+    {
+        "name": "Tangs",
+        "lat": 1.30495005564842,
+        "long": 103.832971130126
+    },
+    {
+        "name": "Tanjong Pagar Centre",
+        "lat": 1.27658360696843,
+        "long": 103.845936303594
+    },
+    {
+        "name": "Tekka Centre",
+        "lat": 1.30617773048079,
+        "long": 103.850609985486
+    },
+    {
+        "name": "The Centrepoint",
+        "lat": 1.30197836876806,
+        "long": 103.839759023144
+    },
+    {
+        "name": "The Paragon",
+        "lat": 1.30387230879994,
+        "long": 103.835857545469
+    },
+    {
+        "name": "The Shoppes at Marina Bay Sands",
+        "lat": 1.28423496027027,
+        "long": 103.858982282698
+    },
+    {
+        "name": "The South Beach",
+        "lat": 1.29498804392056,
+        "long": 103.856276242094
+    },
+    {
+        "name": "Thomson Plaza",
+        "lat": 1.35436282723449,
+        "long": 103.83030941613
+    },
+    {
+        "name": "Velocity",
+        "lat": 1.31929542501907,
+        "long": 103.844191353077
+    },
+    {
+        "name": "Wheelock Place",
+        "lat": 1.30467628730252,
+        "long": 103.830642027577
+    },
+    {
+        "name": "Wisma Atria",
+        "lat": 1.30370477426147,
+        "long": 103.833205752808
+    },
+    {
+        "name": "Zhongshan Mall",
+        "lat": 1.32694504456951,
+        "long": 103.846554377679
+    },
+    {
+        "name": "Katong",
+        "lat": 1.30520653617341,
+        "long": 103.905046110228
+    },
+    {
+        "name": "Bedok Mall",
+        "lat": 1.32473632784728,
+        "long": 103.929256259998
+    },
+    {
+        "name": "Bedok Point",
+        "lat": 1.32496142991054,
+        "long": 103.932360131921
+    },
+    {
+        "name": "Century Square",
+        "lat": 1.35236829566862,
+        "long": 103.943812302253
+    },
+    {
+        "name": "Changi Airport",
+        "lat": 1.34580556425439,
+        "long": 103.982913693484
+    },
+    {
+        "name": "Changi City Point",
+        "lat": 1.33403637902708,
+        "long": 103.962917615531
+    },
+    {
+        "name": "City Plaza",
+        "lat": 1.3147868971977,
+        "long": 103.893472115119
+    },
+    {
+        "name": "Djitsun Mall Bedok",
+        "lat": 1.32611970329469,
+        "long": 103.929554495615
+    },
+    {
+        "name": "Downtown East",
+        "lat": 1.37691412455433,
+        "long": 103.955036748549
+    },
+    {
+        "name": "East Village",
+        "lat": 1.3317758150305,
+        "long": 103.946201241591
+    },
+    {
+        "name": "Eastpoint Mall",
+        "lat": 1.34270592355576,
+        "long": 103.953024618234
+    },
+    {
+        "name": "Elias Mall",
+        "lat": 1.37782876616465,
+        "long": 103.942364336974
+    },
+    {
+        "name": "Kallang Wave Mall",
+        "lat": 1.30307515150401,
+        "long": 103.873149707591
+    },
+    {
+        "name": "Katong Square",
+        "lat": 1.30513510179213,
+        "long": 103.904307160288
+    },
+    {
+        "name": "Katong V",
+        "lat": 1.30385030375719,
+        "long": 103.902850370889
+    },
+    {
+        "name": "Leisure Park Kallang",
+        "lat": 1.30230108405227,
+        "long": 103.876473975883
+    },
+    {
+        "name": "Loyang Point",
+        "lat": 1.36645364010349,
+        "long": 103.964598499523
+    },
+    {
+        "name": "Our Tampines Hub",
+        "lat": 1.35313359828812,
+        "long": 103.940408135311
+    },
+    {
+        "name": "Parkway Parade",
+        "lat": 1.30106975506311,
+        "long": 103.905279491524
+    },
+    {
+        "name": "Paya Lebar Square",
+        "lat": 1.31881487007651,
+        "long": 103.892580778514
+    },
+    {
+        "name": "PLQ Mall",
+        "lat": 1.31756115921,
+        "long": 103.892836694432
+    },
+    {
+        "name": "Singapore Post Centre",
+        "lat": 1.31899666903663,
+        "long": 103.894894915962
+    },
+    {
+        "name": "Tampines 1",
+        "lat": 1.35270160272274,
+        "long": 103.942903567808
+    },
+    {
+        "name": "Tampines Mall",
+        "lat": 1.35252737278519,
+        "long": 103.944698751072
+    },
+    {
+        "name": "The Flow",
+        "lat": 1.30457354662016,
+        "long": 103.904203116447
+    },
+    {
+        "name": "White Sands",
+        "lat": 1.37244981663527,
+        "long": 103.949715694737
+    },
+    {
+        "name": "Plaza",
+        "lat": 1.43712301500434,
+        "long": 103.795314383823
+    },
+    {
+        "name": "Admiralty Place",
+        "lat": 1.43992345062736,
+        "long": 103.80201525015
+    },
+    {
+        "name": "AMK Hub",
+        "lat": 1.36938922690344,
+        "long": 103.84847796594
+    },
+    {
+        "name": "Beauty World Centre",
+        "lat": 1.34241264188642,
+        "long": 103.776539385406
+    },
+    {
+        "name": "Beauty World Plaza",
+        "lat": 1.34180018619223,
+        "long": 103.776259359854
+    },
+    {
+        "name": "Broadway Plaza",
+        "lat": 1.37193729131781,
+        "long": 103.845949444498
+    },
+    {
+        "name": "Buangkok Square",
+        "lat": 1.38433426615655,
+        "long": 103.881623070164
+    },
+    {
+        "name": "Bukit Panjang Plaza",
+        "lat": 1.37992045176243,
+        "long": 103.764357180314
+    },
+    {
+        "name": "Bukit Timah Plaza",
+        "lat": 1.33875930729064,
+        "long": 103.778600077834
+    },
+    {
+        "name": "Causeway Point",
+        "lat": 1.4360700650803,
+        "long": 103.785981524253
+    },
+    {
+        "name": "Compass One",
+        "lat": 1.39205314156706,
+        "long": 103.89507054384
+    },
+    {
+        "name": "Djitsun Mall",
+        "lat": 1.32611970329469,
+        "long": 103.929554495615
+    },
+    {
+        "name": "Fajar Shopping Centre",
+        "lat": 1.38400582466296,
+        "long": 103.771029603101
+    },
+    {
+        "name": "Greenridge Shopping Centre",
+        "lat": 1.38540569283271,
+        "long": 103.766228468185
+    },
+    {
+        "name": "Greenwich V",
+        "lat": 1.38739539397015,
+        "long": 103.869135978173
+    },
+    {
+        "name": "Heartland Mall",
+        "lat": 1.35954177325561,
+        "long": 103.885167372726
+    },
+    {
+        "name": "Hillion Mall",
+        "lat": 1.37843100827586,
+        "long": 103.762842789877
+    },
+    {
+        "name": "HillV2",
+        "lat": 1.36267450828024,
+        "long": 103.76417292006
+    },
+    {
+        "name": "Hougang 1",
+        "lat": 1.37571530699875,
+        "long": 103.879472337592
+    },
+    {
+        "name": "Hougang Green Shopping Mall",
+        "lat": 1.3792452907016,
+        "long": 103.887832017102
+    },
+    {
+        "name": "Hougang Mall",
+        "lat": 1.37249493810003,
+        "long": 103.893775562605
+    },
+    {
+        "name": "Jubilee Square",
+        "lat": 1.37178558575829,
+        "long": 103.847837565378
+    },
+    {
+        "name": "Junction 10",
+        "lat": 1.38033681049385,
+        "long": 103.760167883439
+    },
+    {
+        "name": "Junction 9",
+        "lat": 1.43306021695327,
+        "long": 103.841649364872
+    },
+    {
+        "name": "Keat Hong Shopping Centre",
+        "lat": 1.37736607441394,
+        "long": 103.744393648768
+    },
+    {
+        "name": "Limbang Shopping Centre",
+        "lat": 1.39207388730918,
+        "long": 103.743099573442
+    },
+    {
+        "name": "Lot One",
+        "lat": 1.38497459672379,
+        "long": 103.745011766388
+    },
+    {
+        "name": "Marsiling Mall",
+        "lat": 1.43354318137534,
+        "long": 103.77988189197
+    },
+    {
+        "name": "NEX",
+        "lat": 1.35076935257845,
+        "long": 103.872296143862
+    },
+    {
+        "name": "North East",
+        "lat": 1.32359095684442,
+        "long": 103.878811757886
+    },
+    {
+        "name": "North West",
+        "lat": 1.4350449476836,
+        "long": 103.786826166174
+    },
+    {
+        "name": "Northpoint City",
+        "lat": 1.42969848626288,
+        "long": 103.835776491468
+    },
+    {
+        "name": "Oasis Terraces",
+        "lat": 1.40278015725693,
+        "long": 103.913215101343
+    },
+    {
+        "name": "Punggol Plaza",
+        "lat": 1.39423719717117,
+        "long": 103.913047323223
+    },
+    {
+        "name": "Rail Mall",
+        "lat": 1.35976061966283,
+        "long": 103.767585300058
+    },
+    {
+        "name": "Rivervale Mall",
+        "lat": 1.39219777838449,
+        "long": 103.904471600025
+    },
+    {
+        "name": "Rivervale Plaza",
+        "lat": 1.38533736107771,
+        "long": 103.901841044122
+    },
+    {
+        "name": "Sembawang Shopping Centre",
+        "lat": 1.44182470675733,
+        "long": 103.824845207237
+    },
+    {
+        "name": "Sun Plaza",
+        "lat": 1.44819535371132,
+        "long": 103.819502127155
+    },
+    {
+        "name": "Sunshine Place",
+        "lat": 1.37789727654673,
+        "long": 103.739015486021
+    },
+    {
+        "name": "Teck Whye Shopping Centre",
+        "lat": 1.38004752975397,
+        "long": 103.752483841199
+    },
+    {
+        "name": "The Midtown",
+        "lat": 1.37050445523679,
+        "long": 103.895291518188
+    },
+    {
+        "name": "The Seletar Mall",
+        "lat": 1.39147015374628,
+        "long": 103.876125507257
+    },
+    {
+        "name": "Upper Serangoon Shopping Centre",
+        "lat": 1.35348082277147,
+        "long": 103.878828134896
+    },
+    {
+        "name": "Waterway Point",
+        "lat": 1.40648462132006,
+        "long": 103.902105680785
+    },
+    {
+        "name": "West Mall",
+        "lat": 1.35001920979845,
+        "long": 103.749244800677
+    },
+    {
+        "name": "Wisteria Mall",
+        "lat": 1.41795288501536,
+        "long": 103.841268831617
+    },
+    {
+        "name": "Woodlands Mart",
+        "lat": 1.44562290720221,
+        "long": 103.798140993891
+    },
+    {
+        "name": "Yew Tee Point",
+        "lat": 1.39705741516141,
+        "long": 103.746662121143
+    },
+    {
+        "name": "Yew Tee Square",
+        "lat": 1.39832134857945,
+        "long": 103.747344866472
+    },
+    {
+        "name": "Alexandra Retail Centre",
+        "lat": 1.27414893629254,
+        "long": 103.801399416665
+    },
+    {
+        "name": "HarbourFront Centre",
+        "lat": 1.26396991176004,
+        "long": 103.820243325181
+    },
+    {
+        "name": "VivoCity",
+        "lat": 1.26429316783973,
+        "long": 103.82230469365
+    },
+    {
+        "name": "Clementi",
+        "lat": 1.31200212030821,
+        "long": 103.764986676365
+    },
+    {
+        "name": "Alexandra Central",
+        "lat": 1.28728320930592,
+        "long": 103.805283367958
+    },
+    {
+        "name": "Anchorpoint",
+        "lat": 1.28861469030586,
+        "long": 103.805009964592
+    },
+    {
+        "name": "Big Box",
+        "lat": 1.33191839981568,
+        "long": 103.744920406659
+    },
+    {
+        "name": "Boon Lay Shopping Centre",
+        "lat": 1.34633552457315,
+        "long": 103.712430373455
+    },
+    {
+        "name": "Fairprice Hub",
+        "lat": 1.32561767765205,
+        "long": 103.678409741897
+    },
+    {
+        "name": "Gek Poh Shopping Centre",
+        "lat": 1.34874357136408,
+        "long": 103.697732091001
+    },
+    {
+        "name": "Grantral Mall",
+        "lat": 1.31427043922294,
+        "long": 103.765147487482
+    },
+    {
+        "name": "IMM",
+        "lat": 1.33489844010888,
+        "long": 103.746734487309
+    },
+    {
+        "name": "JCube",
+        "lat": 1.33332312550425,
+        "long": 103.740187071348
+    },
+    {
+        "name": "Jem",
+        "lat": 1.33305999269581,
+        "long": 103.743503708169
+    },
+    {
+        "name": "Jurong Point",
+        "lat": 1.33945271661445,
+        "long": 103.70668501289
+    },
+    {
+        "name": "Pioneer Mall",
+        "lat": 1.34169239214292,
+        "long": 103.697174842118
+    },
+    {
+        "name": "Queensway Shopping Centre",
+        "lat": 1.2876179255874,
+        "long": 103.803391140455
+    },
+    {
+        "name": "Rochester Mall",
+        "lat": 1.30540765569962,
+        "long": 103.788446680148
+    },
+    {
+        "name": "Taman Jurong Shopping Centre",
+        "lat": 1.33484487416514,
+        "long": 103.720462024278
+    },
+    {
+        "name": "The Clementi Mall",
+        "lat": 1.31489619639366,
+        "long": 103.764423054189
+    },
+    {
+        "name": "The Star Vista",
+        "lat": 1.30697044038323,
+        "long": 103.788420274115
+    },
+    {
+        "name": "Tiong Bahru Plaza",
+        "lat": 1.28645889472825,
+        "long": 103.827015256194
+    },
+    {
+        "name": "West Coast Plaza",
+        "lat": 1.30369748971099,
+        "long": 103.766131294678
+    }
+]

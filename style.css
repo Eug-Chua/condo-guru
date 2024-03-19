@@ -1,0 +1,119 @@
+#singaporeMap {
+    height:100vh;
+}
+
+#map-container {
+    position: relative;
+}
+
+#search-container {
+    position: absolute;
+    display: flex;
+    top:10px;
+    left: 50px;
+    padding: 5px;
+    z-index: 500;
+    /* min-width: 250px; */
+    /* max-width: 200px; */
+}
+
+/* #search-results {
+    max-height: 200px;
+    overflow-y: scroll;
+} */
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    position: absolute;
+    top: 100px;
+    z-index: 500;
+}
+
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+  }
+
+.leaflet-popup-content-wrapper {
+    background-color:#3772ff;
+    color:white
+}
+
+.leaflet-popup-tip {
+    background-color:#3772ff;
+}
+
+.mrt-popup .leaflet-popup-content-wrapper {
+    background-color: #ff5555 !important; /* Change to your desired color */
+    color: white !important;
+}
+
+.mrt-popup .leaflet-popup-tip {
+    background-color: #ff5555 !important; /* Ensure this matches the popup content wrapper */
+}
+
+.busStop-popup .leaflet-popup-content-wrapper {
+    background-color: #2f6831 !important; /* Change to your desired color */
+    color: white !important;
+}
+
+.busStop-popup .leaflet-popup-tip {
+    background-color: #2f6831 !important; /* Ensure this matches the popup content wrapper */
+}
+
+.shoppingMall-popup .leaflet-popup-content-wrapper {
+    background-color: #efbf0e !important; /* Change to your desired color */
+    color: black !important;
+}
+
+.shoppingMall-popup .leaflet-popup-tip {
+    background-color: #efbf0e !important; /* Ensure this matches the popup content wrapper */
+}
+
+
+.leaflet-popup-content .txnData {
+    padding: 0;
+    margin: 0;
+}
+
+.apexcharts-tooltip {
+    color: black;
+  }
+
+  @media screen and (min-width: 767px) {
+    #search-container {
+        position: absolute;
+        display: flex;
+        top: 10px;
+        left: 50px;
+        /* min-width: 300px; */
+        max-width: 400px;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        padding: 10px;
+        left: 350px;
+        right: 20px;
+        top: 0px;
+        z-index: 500;
+    }
+}
+
+    @media screen and (max-width: 320px){
+        #search-container {
+            max-width: 210px;
+        }
+    }
+
+    /* #toggleSearchBtn {
+        display:none;
+    } */
