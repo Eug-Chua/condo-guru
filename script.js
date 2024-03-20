@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     let esriLayer = L.tileLayer(
         'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         {maxZoom: 18, attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    }).addTo(map);
+    })
     
     // add the maps to a layer for us to switch on and off
     let baseMaps = {
@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // load median condo price data
     let medianPriceData = await loadMedianPriceData()
+
+    // load yearly median condo price data
+    let regionMedianPriceData = await loadRegionMedianPriceData()
+    console.log(regionMedianPriceData)
 
     // initiate empty cluster group for taxi coordinates
     const taxiCluster = L.markerClusterGroup();
@@ -51,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // initiate empty layer group for shopping mall coordinates
     const mallLayer = L.layerGroup();
-    mallLayer.addTo(map);
+    const mallCluster = L.markerClusterGroup();
 
     fetchAndDrawMalls(mallLayer);
 
@@ -105,10 +109,6 @@ document.addEventListener("DOMContentLoaded", async function() {
     let centralAreaLayerGroup = L.layerGroup();
     let centralRegionLayerGroup = L.layerGroup();
 
-    // add the layer groups to the map
-    centralAreaLayerGroup.addTo(map);
-    centralRegionLayerGroup.addTo(map);
-
     async function addGeoJsonLayer(url, color, weight, opacity, layerGroup) {
         const response = await fetch(url);
         const data = await response.json();
@@ -120,19 +120,22 @@ document.addEventListener("DOMContentLoaded", async function() {
         geoJsonLayer.addTo(layerGroup);
     }
 
+    const coreCentralRegionColor = "orange"
+    const restCentralRegionColor = "#FF4693"
+
     const coreCentralRegion = ["Bukit_Timah","Tanglin", "Downtown_Core", "Marina_East",
     'Marina_South', "Museum", "Newton", "Orchard", "Outram", "River_Valley",
     "Rochor", "Singapore_River", "Straits_View",'Southern_Islands'];
 
     for (let area of coreCentralRegion) {
-        await addGeoJsonLayer(`./data/${area}.geojson`, "purple", 1, 1, centralAreaLayerGroup);
+        await addGeoJsonLayer(`./data/${area}.geojson`, coreCentralRegionColor, 1, 5, centralAreaLayerGroup);
     }
 
     const restCentralRegion = ["Bishan", "Bukit_Merah", "Geylang", "Kallang", "Marine_Parade",
     "Novena", "Queenstown", "Toa_Payoh"];
 
     for (let area of restCentralRegion) {
-        await addGeoJsonLayer(`./data/${area}.geojson`, "orange", 1, 1, centralRegionLayerGroup);
+        await addGeoJsonLayer(`./data/${area}.geojson`, restCentralRegionColor, 1, 5, centralRegionLayerGroup);
     }
 
     // add layer groups for toggling
@@ -157,7 +160,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const response = await SearchOneMap(keyword);
         const lat = response.results[0].LATITUDE;
         const lng = response.results[0].LONGITUDE;
-        AddResultsToMap(response.results, resultlayer, priceData, medianPriceData);
+        AddResultsToMap(response.results, resultlayer, priceData, medianPriceData, regionMedianPriceData);
         resultlayer.addTo(map);
         map.flyTo([lat, lng], 13)
     });
@@ -180,7 +183,7 @@ let mrtIcon = L.icon({
 
  // create bus stop icon 
  let busStopIcon = L.icon({
-    iconUrl: 'images/bus-stop-logo2.png',
+    iconUrl: 'images/bus-stop-logo.png',
     iconSize: [6, 6]
 });
 
@@ -289,14 +292,13 @@ function addMallMarkers(data, mallLayer) {
         }).bindPopup(`<strong>${mall.name}</strong>`);
         // add marker to the mall layer
         marker.addTo(mallLayer);
-
+        
         marker.on('popupopen', function(e) {
             // add the 'mrt-popup' class to the popup's root element
             e.popup.getElement().classList.add('shoppingMall-popup');
         });
     });
 }
-
 
 function fetchAndDrawMalls(mallLayer) {
     // get shopping mall data
@@ -309,17 +311,6 @@ function fetchAndDrawMalls(mallLayer) {
         });
 }
 
-// Add shopping mall markers to map
-function addShoppingMallMarkers(data, mrtLayer) {
-    data.forEach(function(station) {
-        let marker = L.marker([station.lat, station.long], {
-            icon: mrtIcon,
-            title: station.name
-        }).bindPopup(`<strong>${station.name}</strong>`);
-        // add marker to the mrt cluster
-        marker.addTo(mrtLayer);
-    });
-}
 
 async function loadPriceData() {
     const pricedata = [];
@@ -359,7 +350,27 @@ async function loadMedianPriceData() {
     return medianpricedata
 }
 
-function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices) {
+async function loadRegionMedianPriceData() {
+    const regionMedianPriceData = [];
+    const response = await axios.get("yearly_median_condo_psf_region.csv")
+    const data = response.data.split("\n");
+    for (const iterator of data) {
+        const row = iterator.split(',');
+        const info = {
+            "region" : row[1],
+            "regionMedianPSF2019" : parseFloat(row[2]),
+            "regionMedianPSF2020" : parseFloat(row[3]),
+            "regionMedianPSF2021" : parseFloat(row[4]),
+            "regionMedianPSF2022" : parseFloat(row[5]),
+            "regionMedianPSF2023" : parseFloat(row[6]),
+            "regionMedianPSF2024" : parseFloat(row[7]),
+        }
+        regionMedianPriceData.push(info);
+    }
+    return regionMedianPriceData
+}
+
+function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices, regionMedianCondoPrices) {
     resultlayer.clearLayers();
     const popupMaxWidth = 280; 
     
@@ -376,6 +387,11 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices)
     let psf;
     let date;
     let medianPSFData = [];
+
+    const ccrMedianPSFData = regionMedianCondoPrices[1];
+    const ocrMedianPSFData = regionMedianCondoPrices[2];
+    const rcrMedianPSFData = regionMedianCondoPrices[3];
+
     for (let cp of condoPrice) {
         if (cp.name.includes(condoName)) {
             price = cp.transactedPrice;
@@ -432,32 +448,39 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices)
             setTimeout(() => {
                 const options = {
                     series: [{
-                        name: "Median $PSF",
+                        name: `${r.SEARCHVAL}`,
                         data: medianPSFData
+                    },{
+                        name:"Core Central Region",
+                        data: [ccrMedianPSFData['regionMedianPSF2019'],
+                        ccrMedianPSFData['regionMedianPSF2020'],
+                        ccrMedianPSFData['regionMedianPSF2021'],
+                        ccrMedianPSFData['regionMedianPSF2022'],
+                        ccrMedianPSFData['regionMedianPSF2023'],
+                        ccrMedianPSFData['regionMedianPSF2024']],
+                        stroke: {
+                            dashArray: 2
+                          }
                     }],
-                    legend: {
-                        show: false,
-                        floating:false,
-                        onItemHover: {
-                            highlightDataSeries: false
-                        }
-                    },            
                     chart: {
                         type: 'line',
                         height: 'auto',
                         width: '100%',
                         toolbar:{
                             show:false
-                        },
+                        }
                     },
-                    colors:["#F0FFFF"],
+                    colors:["#4D64E8","#41596C"],
                     xaxis: {
                         categories: ['2019', '2020', '2021', '2022', '2023', '2024']
                     },
-                    dataLabels: {
-                        style: {
-                          colors: ['#000000']
-                        }
+                    markers:{
+                        size:4
+                    },
+                    stroke: {
+                        width: [3, 2],
+                        curve: 'smooth',
+                        dashArray: [0, 2]
                       },
                     title: {
                         text: 'Median $PSF FY19 to Present',
