@@ -1,7 +1,7 @@
 # CondoGuru
 
 ## Overview
-The CondoGuru price explorer is an interactive web application designed to provide users with up-to-date information on condominium prices across Singapore.
+The [CondoGuru](https://verdant-licorice-9c7427.netlify.app/) price explorer is an interactive web application designed to provide users with up-to-date information on condominium prices across Singapore.
 
 Leveraging Leaflet for map rendering and integration with various APIs, the application presents an intuitive interface for exploring condo prices, median price data, and other relevant details such as MRT stations, bus stops, and shopping malls within the vicinity.
 
