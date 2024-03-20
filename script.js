@@ -31,19 +31,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     // load median condo price data
     let medianPriceData = await loadMedianPriceData()
 
-    // initiate empty cluster group for MRT coordinates
-    const mrtCluster = L.markerClusterGroup();
-    mrtCluster.addTo(map);
-
     // initiate empty cluster group for taxi coordinates
     const taxiCluster = L.markerClusterGroup();
-    taxiCluster.addTo(map);
-
-    // initiate empty cluster group for MRT coordinates
-    const busStopCluster = L.markerClusterGroup();
-    busStopCluster.addTo(map);
     
-    // drawTaxi(taxiPositions, taxiCluster);
+    drawTaxi(taxiPositions, taxiCluster);
  
     // redraw taxi positions every 30 seconds
     setInterval(async function() {
@@ -110,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }).addTo(map);
     }
     
-    // define layer groups
+    // define layer groups for central region
     let centralAreaLayerGroup = L.layerGroup();
     let centralRegionLayerGroup = L.layerGroup();
 
@@ -126,7 +117,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 return {color: color, weight: weight, opacity: opacity};
             }
         });
-        geoJsonLayer.addTo(layerGroup); // Add to the specified layer group
+        geoJsonLayer.addTo(layerGroup);
     }
 
     const coreCentralRegion = ["Bukit_Timah","Tanglin", "Downtown_Core", "Marina_East",
@@ -144,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         await addGeoJsonLayer(`./data/${area}.geojson`, "orange", 1, 1, centralRegionLayerGroup);
     }
 
-    // Add layer groups for toggling visibility
+    // add layer groups for toggling
     let overlayMaps = {
         "Core Central Region": centralAreaLayerGroup,
         "Rest of Central Region": centralRegionLayerGroup
@@ -160,6 +151,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     });
     
+    // function to search condo location
     document.querySelector("#searchBtn").addEventListener("click", async function() {
         const keyword = document.querySelector("#searchTerms").value;
         const response = await SearchOneMap(keyword);
@@ -192,6 +184,7 @@ let mrtIcon = L.icon({
     iconSize: [6, 6]
 });
 
+// create shopping mall icon 
 let mallIcon = L.icon({
     iconUrl: './images/shopping-mall-logo.png', 
     iconSize: [25, 25],
@@ -249,7 +242,6 @@ function addMrtMarkers(data, mrtLayer) {
     });
 }
 
-
 function fetchAndDrawMrt(mrtLayer) {
     fetch('mrt.json')
         .then(function(response) {
@@ -279,6 +271,7 @@ function addBusStopMarkers(data, bustStopLayer) {
 }
 
 function fetchAndDrawBusStop(busStopLayer) {
+    // get bus stop data
     fetch('bus-stops.json')
         .then(function(response) {
             return response.json();
@@ -291,7 +284,7 @@ function fetchAndDrawBusStop(busStopLayer) {
 function addMallMarkers(data, mallLayer) {
     data.forEach(function(mall) {
         let marker = L.marker([mall.lat, mall.long], {
-            icon: mallIcon, // Use the custom mallIcon if defined, or omit this line to use the default icon
+            icon: mallIcon,
             title: mall.name
         }).bindPopup(`<strong>${mall.name}</strong>`);
         // add marker to the mall layer
@@ -304,8 +297,10 @@ function addMallMarkers(data, mallLayer) {
     });
 }
 
+
 function fetchAndDrawMalls(mallLayer) {
-    fetch('shopping-malls.json') // Make sure the file name matches JSON file
+    // get shopping mall data
+    fetch('shopping-malls.json') 
         .then(function(response) {
             return response.json();
         })
@@ -328,7 +323,7 @@ function addShoppingMallMarkers(data, mrtLayer) {
 
 async function loadPriceData() {
     const pricedata = [];
-    const response = await axios.get("condos_2024.csv")
+    const response = await axios.get("condos_2023_2024.csv")
     const data = response.data.split("\n");
     for (const iterator of data) {
         const row = iterator.split(',');
@@ -340,7 +335,6 @@ async function loadPriceData() {
             "date": row[7]
         }
         pricedata.push(info);
-        // console.log(info);
     }
     return pricedata
 }
@@ -361,7 +355,6 @@ async function loadMedianPriceData() {
             "medianPSF2024" : parseFloat(row[6]),
         }
         medianpricedata.push(info);
-        // console.log(info);
     }
     return medianpricedata
 }
@@ -405,7 +398,8 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices)
             ];
         }
     }
-
+    
+    // format currency output
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -423,18 +417,18 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices)
             divElement.innerHTML = `
                 <h5>${r.SEARCHVAL}</h5>
                 <strong>${streetName}</strong>
-                <p class='txnData'>Last Transacted Price in 2024: ${formatter.format(price)}</p>
-                <p class='txnData'>Last Transacted $PSF in 2024: ${formatter.format(psf)}</p>
-                <p class='txnData' id="lastTxnData'>Last Transacted Date: ${date}</p>
+                <p class='txnData'>Last Transacted Price: ${formatter.format(price)}</p>
+                <p class='txnData'>Last Transacted $PSF: ${formatter.format(psf)}</p>
+                <p class='txnData'>Last Transacted Date: ${date}</p>
             `;
 
-            // Create a container for the ApexCharts chart
-            const chartContainer = document.createElement('div');
+            const chartContainer = document.createElement('div'); // Create a container for the ApexCharts chart
             chartContainer.style.width = `${popupMaxWidth}px`;
             chartContainer.style.height = "auto"; 
             chartContainer.id = `chart${r.UNIQUE_ID}`;
-            divElement.appendChild(chartContainer);
+            divElement.appendChild(chartContainer); // append chart container
 
+            // ApexCharts specifications
             setTimeout(() => {
                 const options = {
                     series: [{
