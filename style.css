@@ -13,14 +13,7 @@
     left: 50px;
     padding: 5px;
     z-index: 500;
-    /* min-width: 250px; */
-    /* max-width: 200px; */
 }
-
-/* #search-results {
-    max-height: 200px;
-    overflow-y: scroll;
-} */
 
 
 .buttons-container {
@@ -41,79 +34,79 @@
   }
 
 .leaflet-popup-content-wrapper {
-    background-color:#3772ff;
-    color:white
+    background-color: whitesmoke;
+    color:black
 }
 
 .leaflet-popup-tip {
-    background-color:#3772ff;
+    background-color: white;
 }
 
 .mrt-popup .leaflet-popup-content-wrapper {
-    background-color: #ff5555 !important; /* Change to your desired color */
+    background-color: #ff5555 !important; 
     color: white !important;
 }
 
 .mrt-popup .leaflet-popup-tip {
-    background-color: #ff5555 !important; /* Ensure this matches the popup content wrapper */
+    background-color: #ff5555 !important; 
 }
 
 .busStop-popup .leaflet-popup-content-wrapper {
-    background-color: #2f6831 !important; /* Change to your desired color */
+    background-color: #2f6831 !important; 
     color: white !important;
 }
 
 .busStop-popup .leaflet-popup-tip {
-    background-color: #2f6831 !important; /* Ensure this matches the popup content wrapper */
+    background-color: #2f6831 !important; 
 }
 
 .shoppingMall-popup .leaflet-popup-content-wrapper {
-    background-color: #efbf0e !important; /* Change to your desired color */
-    color: black !important;
+    background-color: #efbf0e !important; 
+    color: rgb(50, 47, 47) !important;
 }
 
 .shoppingMall-popup .leaflet-popup-tip {
-    background-color: #efbf0e !important; /* Ensure this matches the popup content wrapper */
+    background-color: #efbf0e !important;
 }
-
 
 .leaflet-popup-content .txnData {
     padding: 0;
     margin: 0;
 }
 
+.apexcharts-title-text {
+    fill: rgb(103, 98, 98);
+    text-decoration: underline;
+  }
+
 .apexcharts-tooltip {
     color: black;
   }
 
-  @media screen and (min-width: 767px) {
-    #search-container {
-        position: absolute;
-        display: flex;
-        top: 10px;
-        left: 50px;
-        /* min-width: 300px; */
-        max-width: 400px;
-    }
-
-    .buttons-container {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        padding: 10px;
-        left: 350px;
-        right: 20px;
-        top: 0px;
-        z-index: 500;
-    }
+@media screen and (min-width: 767px) {
+#search-container {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 50px;
+    /* min-width: 300px; */
+    max-width: 400px;
 }
 
-    @media screen and (max-width: 320px){
-        #search-container {
-            max-width: 210px;
-        }
-    }
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    padding: 10px;
+    left: 350px;
+    right: 20px;
+    top: 0px;
+    z-index: 500;
+}
+}
 
-    /* #toggleSearchBtn {
-        display:none;
-    } */
+@media screen and (max-width: 320px){
+    #search-container {
+        max-width: 210px;
+    }
+}
