@@ -23,3 +23,5 @@ The Singapore Condo Price Explorer is an interactive web application designed to
 ## Data Sources
 - **OpenStreetMap and Esri:** Base map layers providing detailed geographical context.
 - **Data.gov.sg:** Real-time taxi availability data, condominium transaction prices, median price data, MRT stations, bus stops, and shopping mall locations, stored in JSON and CSV formats.
+
+This project is deployed on Netlify: [https://verdant-licorice.netlify.app/](https://verdant-licorice-9c7427.netlify.app/)
