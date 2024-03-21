@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // load yearly median condo price data
     let regionMedianPriceData = await loadRegionMedianPriceData()
-    console.log(regionMedianPriceData)
 
     // initiate empty cluster group for taxi coordinates
     const taxiCluster = L.markerClusterGroup();
@@ -265,7 +264,7 @@ function addBusStopMarkers(data, bustStopLayer) {
         }).bindPopup(`<strong>${busStop[2]}</strong>`);
         marker.addTo(bustStopLayer);
 
-        // Use the 'popupopen' event to add specific class to the popup
+        // add the 'popupopen' event to add specific class to the popup
         marker.on('popupopen', function(e) {
             // add the 'mrt-popup' class to the popup's root element
             e.popup.getElement().classList.add('busStop-popup');
@@ -391,6 +390,7 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices,
     const ccrMedianPSFData = regionMedianCondoPrices[1];
     const ocrMedianPSFData = regionMedianCondoPrices[2];
     const rcrMedianPSFData = regionMedianCondoPrices[3];
+    const sgMedianPSFData = regionMedianCondoPrices[4];
 
     for (let cp of condoPrice) {
         if (cp.name.includes(condoName)) {
@@ -451,13 +451,13 @@ function AddResultsToMap(resultlist, resultlayer, condoPrice, medianCondoPrices,
                         name: `${r.SEARCHVAL}`,
                         data: medianPSFData
                     },{
-                        name:"Core Central Region",
-                        data: [ccrMedianPSFData['regionMedianPSF2019'],
-                        ccrMedianPSFData['regionMedianPSF2020'],
-                        ccrMedianPSFData['regionMedianPSF2021'],
-                        ccrMedianPSFData['regionMedianPSF2022'],
-                        ccrMedianPSFData['regionMedianPSF2023'],
-                        ccrMedianPSFData['regionMedianPSF2024']],
+                        name:"Whole of Singapore",
+                        data: [sgMedianPSFData['regionMedianPSF2019'],
+                        sgMedianPSFData['regionMedianPSF2020'],
+                        sgMedianPSFData['regionMedianPSF2021'],
+                        sgMedianPSFData['regionMedianPSF2022'],
+                        sgMedianPSFData['regionMedianPSF2023'],
+                        sgMedianPSFData['regionMedianPSF2024']],
                         stroke: {
                             dashArray: 2
                           }
